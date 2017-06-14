@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title>Blank App</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script type="text/javascript" src="js/sh.js"></script>
+</head>
+<body>
+
+<audio></audio>
+
+<div id="status"></div>
+
+<div id="topbar">
+    <a href="sh1.html"><div id="back"></div></a>
+    <p id="title">Scavenger Hunt</p>
+    <p id="instruction" style="margin-top:0px; margin-bottom: 0px;">Try your best and find all the objects</p>
+</div>
+
+<div id="content2">
+	<div id="objects">
+		<div class="object"><img src="./images/object1.png" /></div>
+		<div class="object"><img src="./images/object2.png" /></div>
+		<div class="object"><img src="./images/object3.png" /></div>
+		<a href="hunt.html"><div class="object"><img src="./images/object4.png"  id="wine"/></div></a>
+		<div class="object"><img src="./images/object10.png" /></div>
+		<a href="huntturkey.html"><div class="object"><img src="./images/object6.png"  id="turkey"/></div></a>
+		<div class="object"><img src="./images/object7.png" /></div>
+		<div class="object"><img src="./images/object8.png" /></div>
+		<div class="object"><img src="./images/object9.png" /></div>
+	</div>
+</div>
+
+<div id="bottombar">
+    <a href="game.html" style="text-decoration: none; color:white;"><div id="play_btn" onclick="play()" style="cursor: pointer;">
+        <p id="points">0 point</p>
+    </div></a>
+</div>
+
+<script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/sh2.js"></script>
+</body>
+</html>

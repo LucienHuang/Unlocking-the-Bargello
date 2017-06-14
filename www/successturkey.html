@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title>Blank App</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+
+<div id="status"></div>
+
+<div id="topbar2">
+    <p id="title" style="line-height: 50px;">Scavenger Hunt</p>
+</div>
+
+<div id="content2" style="margin-top: 60px;">
+    <div id="david-pic">
+        <img src="./images/turkey-2.png" />
+    </div>
+    <p id="suc-title">YOU FOUND IT!</p>
+    <p id="suc-text">ge gegegege gege gegee</p>
+</div>
+
+<div id="bottombar">
+    <a href="game.html?step=2" style="text-decoration: none; color: white;">
+        <div id="play_btn" >
+            <p>Continue hunting</p>
+        </div>
+    </a>
+</div>
+
+<script type="text/javascript">
+    
+var success = new Audio('./tu_found.mp3');
+
+document.addEventListener("DOMContentLoaded", function (event) {
+    success.play();
+});
+</script>
+
+<script type="text/javascript" src="cordova.js"></script>
+</body>
+</html>

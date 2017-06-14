@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title>Blank App</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<div id="status"></div>
+
+<div id="topbar">
+    <a href="tours.html"><div id="back" style="margin-top:30px;"></div></a>
+    <p id="instruction">Tap on different topics to<br>customize your tour<br>
+(You can choose more than one)</p>
+</div>
+
+<div id="content">
+    <div class="topics" id="topic-1"></div>
+    <div class="topics" id="topic-2"></div>
+    <div class="topics" id="topic-3"></div>
+    <div class="topics" id="topic-4"></div>
+    <div class="topics" id="topic-5"></div>
+</div>
+
+<div id="bottombar">
+    <a href="bigmap.html?" style="color: white; text-decoration: none;"><div id="btn_time">
+        <p id="time">
+            time
+        </p>
+    </div></a>
+</div>
+
+<script type="text/javascript" src="cordova.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+
+<script type="text/javascript">
+    
+var intro = new Audio('./intro_bargello.mp3');
+
+document.addEventListener("DOMContentLoaded", function (event) {
+        intro.play();
+});
+</script>
+</body>
+</html>

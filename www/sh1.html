@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title>Blank App</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script type="text/javascript" src="js/sh.js"></script>
+</head>
+<body>
+
+<div id="status"></div>
+
+<div id="topbar">
+    <a href="tours.html"><div id="back"></div></a>
+    <p id="title">Scavenger Hunt</p>
+    <p id="instruction" style="margin-top:0px; margin-bottom: 0px;">Tap to show the text</p>
+</div>
+
+<div id="content2">
+    <div id="david-pic" onclick="change()">
+        <img src="./images/sh.jpg" />
+    </div>
+    <div id="timeandpeople">
+        <img src="./images/people.png" style="width:18px; height:23px;" />
+        <p>Age 6-17</p>
+        <img src="./images/time.png" style="width:18px; height:18px;" />
+        <p>average 40-60 mins</p>
+    </div>
+</div>
+
+<div id="bottombar">
+    <a href="game.html?step=0" style="text-decoration: none; color:white;"><div id="play_btn" style="cursor: pointer;">
+        <p>START HUNTING</p>
+    </div></a>
+</div>
+
+<script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/shstart.js"></script>
+</body>
+</html>

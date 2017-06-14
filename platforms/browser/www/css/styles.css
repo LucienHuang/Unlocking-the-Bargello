@@ -1,0 +1,605 @@
+/*
+   statusbar-overlay sets the background color for the overlay. Black text is the default when the statusbar plugin is not added. When the
+   statusbar plugin is added, it also adds default setting to make the content white via:
+
+       <preference name="StatusBarStyle" value="lightcontent"/>
+
+   Setting the background color to black will allow the default light content (white text/icons) to show on it. The statusbar plugin is included
+   in the config.xml file and will be added by the CLI when you build locally.
+
+   See https://github.com/apache/cordova-plugin-statusbar
+*/
+
+@import url('https://fonts.googleapis.com/css?family=Questrial|Vidaloka');
+
+body {
+    background: #ece9dd;
+    color: #2a2a2a;
+    margin:0;
+    padding:0;
+    font-family: sans-serif;
+}
+
+.bg-0{
+    top:0;
+    left:0;
+    width:100%;
+    height:100vh;
+    background:url("../img/0-bg.png");
+    background-size: 100%;
+    position: fixed;
+  }
+
+  .bg-2{
+    z-index: -1;
+    top:0;
+    left:0;
+    width:100%;
+    height:100vh;
+    background:url("../img/1-bg.png");
+    background-size: 100%;
+    position: fixed;
+  }
+
+.btn-0{
+    display: block;
+    z-index: 1;
+    margin-top:402px;
+    right:0;
+    width:307px;
+    height:86px;
+    cursor: auto;
+    text-align: right;
+    float:right;
+}
+
+.btn-0 img{
+    width:100%;
+    height:100%;
+}
+
+.bg-1
+{
+    margin-top:220px;
+    padding:0;
+}
+
+.bg-1 p{
+    margin:0;
+}
+
+.q-1{
+    margin:0;
+    text-align: center;
+    font-size:12pt;
+    margin-bottom: 25px;
+}
+
+.btn-1{
+    margin-top:15px;
+    text-align: center;
+    height:60px;
+    background: #f2cd5c;
+}
+
+
+.btn-1 a{
+    text-decoration: none;
+    color: #2a2a2a;
+    font-size:22pt;
+    line-height: 60px;
+    font-family: Serif;
+}
+
+#status{
+    background: #ece9dd;
+    z-index: 1;
+    position: fixed;
+    top:0;
+    left:0;
+    height:20px;
+    width:100%;
+    margin-bottom: 0;
+}
+
+#topbar{
+    z-index: 1;
+    position: fixed;
+    background: #ece9dd;
+    top:20px;
+    padding:0px;
+    left:0;
+    width:100%;
+    height:68px;
+}
+
+#topbar2{
+    z-index: 1;
+    position: fixed;
+    background: #ece9dd;
+    top:20px;
+    padding:0px;
+    left:0;
+    width:100%;
+    height:50px;
+}
+
+#instruction2{
+    z-index: 1;
+    font-size: 16px;
+    line-height:30px;
+    text-align: center;
+}
+
+#bottombar{
+    z-index: 1;
+    position: fixed;
+    background: #ece9dd;
+    bottom: 0px;
+    left: 0;
+    width: 100%;
+    height:60px;
+    padding-top:0px;
+}
+
+#bottombar3{
+    z-index: 1;
+    position: fixed;
+    background: #ece9dd;
+    bottom: 0px;
+    left: 0;
+    width: 100%;
+    height:160px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    display: flex;
+}
+
+#bottombar2{
+    z-index: 1;
+    position: fixed;
+    bottom: 0px;
+    left: 0;
+    width: 100%;
+    padding:0px;
+}
+
+#content{
+    margin-top: 90px;
+    margin-bottom: 80px;
+}
+
+.topics{
+    width:345px;
+    height:242px;
+    margin-left:15px;
+    transition: all 0.3s ease-in-out;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+#title{
+    margin-top:2px;
+    font-size:32px;
+    text-align: center;
+    display: inline-block;
+    width: 86%;
+    margin-left: 7%;
+    margin-bottom: 0;
+}
+
+#instruction{
+    font-size:16px;
+    text-align: center;
+    display: inline-block;
+    width:86%;
+    margin-left: 7%;
+    margin-top: 0px;
+    margin-bottom: 10px;
+}
+
+
+#topic-1{
+    background: url("../images/topic1_on.png");
+    background-size: 100%;
+}
+
+#topic-2{
+    background: url("../images/topic2_off.png");
+    background-size: 100%;
+}
+
+#topic-3{
+    background: url("../images/topic3_off.png");
+    background-size: 100%;
+}
+
+#topic-4{
+    background: url("../images/topic4_off.png");
+    background-size: 100%;
+}
+
+#topic-5{
+    height:241px;
+    background: url("../images/topic5_off.png");
+    background-size: 100%;
+}
+
+#back{
+    position: fixed;
+    z-index: 9;
+    width:13px;
+    height:19px;
+    margin-top: 20px;
+    margin-left: 20px;
+    background: url("../images/back.png");
+    background-size: 100%;
+}
+
+#btn_time{
+    background: #35ba6f;
+    width:100%;
+    margin-left:0;
+    height:60px;
+    margin-top:0;
+    margin-bottom:0;
+}
+
+#btn_time p{
+    margin:0;
+    font-size:18px;
+    line-height: 60px;
+    color:white;
+    text-align: center;
+}
+
+#big-map{
+    margin-top: 90px;
+    height:485px;
+    width:288px;
+    background: url("../images/bigmap.png");
+    background-size: 100%;
+    margin-left:43px;
+    margin-bottom: 60px;
+}
+
+#small-map{
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    position: fixed;
+    width: 375px;
+    height:668.5px;
+    margin-bottom:140px;
+    left:0px;
+    top:0px;
+    z-index: -1;
+    background: url("../images/smallmap.png");
+    background-size: 100%;
+}
+
+#level-btn{
+    z-index: 9;
+    width:302px;
+    height:44px;
+    margin-left:36px;
+    margin-bottom:20px;
+    background: url("../images/level_btn.png");
+    background-size:100%;
+}
+
+#donatello{
+    z-index: 99px;
+    position: absolute;
+    margin-top: 340px;
+    height:150px;
+    margin-left:75px;
+    width:210px;
+}
+
+#david{
+    margin-top:240px;
+    margin-left:105px;
+    width:25px;
+    height:25px;
+}
+
+#content2{
+    margin-top: 90px;
+    margin-bottom: 60px;
+}
+
+#david-pic{
+    width:100%;
+}
+
+#david-pic img{
+    width:100%;
+}
+
+#play_btn{
+    background: #35ba6f;
+    width:100%;
+    height:60px;
+    text-align: center;
+    margin:0px;
+}
+
+#small-icon{
+    margin-top:17px;
+    display: inline-block;
+    width:19px;height:22px;
+    background: url("../images/play.png");
+    background-size: 100%;
+}
+
+.thumbnail{
+    display: inline-table;
+    width:144px;
+    height:144px;
+    margin: 8px;
+    border:solid 1px white;
+    border-radius: 10px;
+}
+
+#tn0{
+    background: url("../images/thumb0.png");
+    background-size: 100%;
+}
+
+#tn0 p{
+    height: 100%;
+    text-align: center;
+    color: white;
+    font-size:20px;
+}
+
+#tn1{
+    background: url("../images/thumb1.png");
+    background-size: 100%;
+}
+
+#tn2{
+    background: url("../images/thumb2.png");
+    background-size: 100%;
+}
+
+#tn3{
+    background: url("../images/thumb3.png");
+    background-size: 100%;
+}
+
+#tn4{
+    background: url("../images/thumb4.png");
+    background-size: 100%;
+    margin-right:8px;
+}
+
+#timeandpeople{
+    display: flex;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+#timeandpeople p{
+    display: inline-block;
+    margin-left: 5px;
+    margin-right:40px;
+    line-height: 18px;
+    margin-top:0;
+    margin-bottom:0;
+}
+
+#timeandpeople img{
+    display: inline-block;
+    margin-left: 0;
+}
+
+#play_btn p{
+    margin:0;
+    color:white;
+    font-size: 24px;
+    line-height: 60px;
+}
+
+#objects{
+    width:90%;
+    margin-left: 5%;
+    margin-top: 150px;
+}
+
+.object{
+    display: inline-block;
+    width:105px;
+    height:105px;
+    margin-left: 2px;
+    margin-right: 2px;
+    background: black;
+    margin-bottom: 2px;
+}
+
+.object img{
+    width:100%;
+    height:100%;
+}
+
+#btn-col{
+    display: flex;
+    width:100%;
+    height:100%;
+}
+
+#qr-btn{
+    background: #35ba6f;
+    width:100%;
+    height:60px;
+    text-align: center;
+    margin:0px;
+}
+
+#clue-btn{
+    background: #15a0bf;
+    width:50%;
+    height:60px;
+    text-align: center;
+    margin:0px;
+}
+
+#clue-title{
+    font-size: 32px;
+    margin-left: 5%;
+    margin-top:10px;
+    margin-bottom: 5px;
+}
+
+#clue-content{
+    margin-left: 5%;
+    width:90%;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+#btn-col p{
+    margin: 0;
+    font-size:22px;
+    line-height: 60px;
+    color: white;
+}
+
+#btn-col a{
+    display: inline;
+    width:50%;
+}
+
+#video{
+    width:100%;
+    height:375px;
+}
+
+#suc-title{
+    font-family: serif;
+    font-size: 36px;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+#suc-text{
+    font-size: 16px;
+    text-align: left;
+    margin-top: 10px;
+    margin-bottom: 80px;
+    width:90%;
+    margin-left:5%;
+}
+
+.bg-3{
+    margin-top:30px;
+    padding:0;
+    margin-bottom: 30px;
+}
+
+.btn-2{
+    margin-top:15px;
+    text-align: center;
+    width:100%;
+    height:150px;
+}
+
+#btn-2-eng{
+    background: url("../images/english.png");
+    background-size: 100%;
+    background-position: center;
+}
+
+#btn-2-ita{
+    background: url("../images/italian.png");
+    background-size: 100%;
+    background-position: center;
+}
+
+#btn-2-esp{
+    background: url("../images/spanish.png");
+    background-size: 100%;
+    background-position: center;
+}
+
+#btn-2-fr{
+    background: url("../images/french.png");
+    background-size: 100%;
+    background-position: center;
+}
+
+#btn-2-ger{
+    background: url("../images/german.png");
+    background-size: 100%;
+    background-position: center;
+}
+
+#btn-2-ch{
+    background: url("../images/chinese.png");
+    background-size: 100%;
+    background-position: center;
+}
+
+#btn-2-jp{
+    background: url("../images/japanese.png");
+    background-size: 100%;
+    background-position: center;
+}
+
+#btn-2-ar{
+    background: url("../images/arabic.png");
+    background-size: 100%;
+    background-position: center;
+}
+
+#btn-2-in{
+    background: url("../images/indian.png");
+    background-size: 100%;
+    background-position: center;
+}
+
+.btn-2 p{
+    font-size: 28px;
+    color:white;
+    line-height: 150px;
+}
+
+#btn-2-ar p{
+    font-size: 36px;
+    color:white;
+    line-height: 150px;
+}
+
+.bg-3 a{
+    text-decoration: none;
+    color: color;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
